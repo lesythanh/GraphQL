@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PetEntity {
+  id: Float!
+  name: String!
+}
+
+type Query {
+  petAll: [PetEntity!]!
+  find(id: Int!): PetEntity!
+}
+
+type Mutation {
+  createPet(createPetInput: CreatePetInput!): PetEntity!
+  updatePet(id: Int!, updatePetInput: UpdatePetInput!): PetEntity!
+  deletePet(id: Int!): Boolean!
+}
+
+input CreatePetInput {
+  name: String!
+}
+
+input UpdatePetInput {
+  name: String!
+}
